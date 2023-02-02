@@ -4,7 +4,7 @@ This is an H1
 This is an H2
 -------------
 
-#this is H1
+# this is H1
 
 ## this is H2
 
@@ -50,14 +50,14 @@ normal text
 
 
 | 左对齐 | 居中 | 右对齐 |
-| :------- | :----: | -------: |
-| 内容   | 内容 |   内容 |
+|:----| :----: | -------: |
+| 内容  | 内容 |   内容 |
 
 那么如何插入代码呢
 
 缩进制表符即可
 
-System.out.println("Hello World!");
+    System.out.println("Hello World!");
 或者使用单行代码
 
 这里有一句代码`code`
@@ -126,7 +126,7 @@ This is [an example][1] reference-style link.
   - [ ]  浏览日本免税店的物品
   - [X]  购买蓝宝石公主号七月一日的船票
 
-##流程图
+## 流程图
 
 ```mermaid
 flowchart TD
