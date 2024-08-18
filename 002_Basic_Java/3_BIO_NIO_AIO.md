@@ -234,7 +234,7 @@ public class WriteToFile {
             }
         };
 
-        System.out.println("Main Thread ID: " + Thread.currentThread().getId());
+        System.out.println("ConsoleTest Thread ID: " + Thread.currentThread().getId());
         fileChannel.write(ByteBuffer.wrap("Sample".getBytes()), 0, "First Write",
             handler);
         fileChannel.write(ByteBuffer.wrap("Box".getBytes()), 0, "Second Write",
