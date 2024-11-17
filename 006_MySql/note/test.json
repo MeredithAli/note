@@ -1,0 +1,47 @@
+{
+  "table": "`employees`",
+  "range_analysis": {
+    "table_scan": {--全表扫描情况
+    "rows": 10123,--扫描行数
+    "cost": 2054.7--查询成本
+  }
+  /* table_scan */,
+  "potential_range_indexes": [--查询可能使用的索引
+{
+  "index": "PRIMARY",--主键索引
+  "usable": false,
+  "cause": "not_applicable"
+},
+{
+"index": "idx_name_age_position", ‐‐辅助索引
+"usable": true,
+"key_parts": [
+"name",
+"age",
+"position",
+"id"
+] /* key_parts */
+}
+] /* potential_range_indexes */,
+"setup_range_conditions": [
+] /* setup_range_conditions */,
+"group_index_range": {
+"chosen": false,
+"cause": "not_group_by_or_distinct"
+} /* group_index_range */,
+"analyzing_range_alternatives": {‐‐分析各个索引使用成本
+"range_scan_alternatives": [
+{
+"index": "idx_name_age_position",
+"ranges": [
+"a < name" ‐‐索引使用范围
+] /* ranges */,
+"index_dives_for_eq_ranges": true,
+"rowid_ordered": false, ‐‐使用该索引获取的记录是否按照主键排序
+"using_mrr": false,
+"index_only": false, ‐‐是否使用覆盖索引
+"rows": 5061, ‐‐索引扫描行数
+"cost": 6074.2, ‐‐索引使用成本
+"chosen": false, ‐‐是否选择该索引
+"cause": "cost"
+}
